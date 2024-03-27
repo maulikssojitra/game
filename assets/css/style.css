@@ -1,0 +1,833 @@
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../font/Rajdhani-Medium.woff2') format('woff2'),
+        url('../font/Rajdhani-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../font/Rajdhani-Regular.woff2') format('woff2'),
+        url('../font/Rajdhani-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../font/Rajdhani-SemiBold.woff2') format('woff2'),
+        url('../font/Rajdhani-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../font/Rajdhani-Bold.woff2') format('woff2'),
+        url('../font/Rajdhani-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@media (min-width: 1200px) {
+    .container, .container-sm, .container-md, .container-lg, .container-xl {
+      max-width: 1600px;
+    }
+  }
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Rajdhani';
+    font-weight: bold;
+}
+
+body{
+    position: relative;
+}
+
+.dark-bg::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/download (2).jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+::selection {
+    background: #6b54b6;
+    color: #1b0f23;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.back-to-top{
+    text-decoration: none;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    background-color: #22152c;
+    font-family: 'rajdhani';
+    font-weight: 500;
+    position: absolute;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 8px;
+    border: none;
+    transition:0.1s;
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+    z-index: 999;
+    display:none;
+}
+
+.back-to-top:hover{
+    color: #fff;
+    border-bottom: 3px solid #7228e2;
+}
+
+/******************************** header********************************/
+.header{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.header ul li a{
+    font-family: 'Rajdhani';
+    font-weight:bold;
+    font-size: 20px;
+    color: #fff !important;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.overlay{
+    position: absolute;
+    transition: all 0.5s;
+    width: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background-color:#7228e2;
+}
+
+.header ul li a:hover .overlay{
+    width: 100%;
+}
+
+.header-scroll{
+    background-color: #1b0f23;
+}
+
+.width{
+    width: 100%;
+    max-width: 100%;
+}
+
+.navbar-toggler{
+    margin-left: auto !important;
+}
+
+.navbar-toggler{
+    color: #fff !important;
+    outline: none !important;
+}
+
+@media (max-width : 768px) {
+    .header{
+        background-color: #1b0f23;
+    }
+}
+
+/******************************** hero ********************************/
+.hero{
+    padding: 180px 0;
+    position: relative;
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    /* animation: zoom 5s ease-out both; */
+    
+}
+
+/* @-webkit-keyframes zoom {
+    0% {
+      background-size: 120% 120%;
+    }
+    100% {
+        background-size: 130% 130%;
+    }
+  }
+  @keyframes zoom {
+    0% {
+        background-size: 120% 120%;
+      }
+      100% {
+          background-size: 130% 130%;
+      }
+  } */
+  
+
+.hero .container .hero-text h1{
+    font-size:180px;
+    color:white;
+    text-transform:uppercase
+}
+
+@media (max-width: 768px) {
+    .hero .container .hero-text h1{
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-text img{
+        width: 300px;
+    }
+    .hero .container .hero-text h1{
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-text img{
+        width: 200px;
+    }
+}
+
+/******************************** with us ********************************/
+.boosts{
+    padding: 100px 0;
+}
+
+.line{
+    width:5px;
+    height:40px;
+    background-color: #7228e2;
+}
+
+.with-header h1{
+    color:white;
+    text-transform:uppercase;
+    margin-left: 20px;
+}
+
+.more-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color:white;
+    font-family: 'Rajdhani';
+    display:flex;
+    align-items: center;
+}
+
+.more-btn i{
+    margin-left: 5px;
+    transition: 0.5s;
+}
+
+.more-btn:hover i{
+    padding-left: 10px;
+}
+
+.with-box{
+    background-color: #20132a;
+    padding: 50px 30px;
+    cursor: pointer;
+    transition:.3s;
+    position: relative;
+}
+
+.ovl-top{
+    position: absolute;
+    width:0px;
+    height: 3px;
+    top: 0;
+    left: 0;
+    background-color: #7228e2;
+    transition:1s;
+}
+
+.ovl-right{
+    position: absolute;
+    width:3px;
+    height: 0;
+    top: 0;
+    right: 0;
+    background-color: #7228e2;
+    transition:1s;
+}
+
+.with-box:hover .ovl-right{
+    height:100%;
+}
+
+.ovl-bottom{
+    position: absolute;
+    width:0px;
+    height: 3px;
+    bottom: 0;
+    right: 0;
+    background-color: #7228e2;
+    transition:1s;
+}
+
+.with-box:hover .ovl-bottom{
+    width:100%;
+}
+
+.ovl-left{
+    position: absolute;
+    width:3px;
+    height: 0px;
+    bottom: 0;
+    left: 0;
+    background-color: #7228e2;
+    transition:1s;
+}
+
+.with-box:hover .ovl-left{
+    height:100%;
+}
+
+.with-box:hover .ovl-top{
+    width:100%;
+}
+
+.with-box h2{
+    color:white;
+    margin: 20px;
+}
+
+.with-box p{
+    color:rgba(255, 255, 255, 0.534);
+    font-size: 20px;
+}
+
+@media (max-width: 425px) {
+    .f-c{
+        flex-direction: column;
+    }
+    .mar-0{
+        margin: 0 !important;
+    }
+}
+
+/******************************** status ********************************/
+.status .status-text{
+    padding: 50px 30px;
+    height: 100%;
+}
+
+.status h1{
+    color:white;
+    font-size: 80px;
+}
+
+.status h2{
+    color:white;
+}
+
+.rot2{
+    transform: rotate(-90deg);
+    color:#7228e2;
+}
+
+.status-text p{
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.rating span{
+    color:#7228e2;
+    font-family: 'rajdhani';
+    text-transform:uppercase;
+}
+
+@media (max-width: 768px) {
+    .status-text h1{
+        font-size:40px;
+    }
+    .turnamen-header{
+        flex-direction: column;
+        text-align: center !important;
+    }
+    .rot2{
+        transform: rotate(0deg) !important;
+    }
+    .status-text p{
+        font-size:16px;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .rating{
+        padding: 0px !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width : 425px) {
+    .rating{
+        text-align: center !important;
+    }
+}
+
+@media (max-width : 375px) {
+    .status .line{
+        display: none !important;
+    }
+    .stu-0 h2{
+        margin: 0 !important;
+    }
+    .rating{
+        padding: 0px !important;
+        text-align: center !important;
+    }
+}
+
+/******************************** turnament ********************************/
+.turnament{
+    padding-top: 100px;
+}
+
+.turnament .turnament-header h1{
+    color:white;
+    font-size: 60px;
+    margin-left: auto;
+}
+
+.turnament .turnament-header .rot{
+    color:white;
+    transform: rotate(-90deg);
+    font-family: 'Rajdhani';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.turnament-text-1 h1{
+    color:white;
+}
+
+.turnament-text-1 p{
+    color:rgba(255, 255, 255, 0.582);
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .turnament .turnament-header h1{
+        font-size:40px;
+    }
+    .turnament-header{
+        flex-direction: column;
+        text-align: center !important;
+    }
+    .rot{
+        transform: rotate(0deg) !important;
+    }
+
+    .turnament-text-1 h1{
+        font-size:30px !important;
+    }
+}
+
+/******************************** slider ********************************/
+.slider{
+    background-image: url(../img/dr.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding:200px 0px;
+    background-attachment: fixed;
+}
+
+.slider h1{
+    color:white;
+    font-family: 'rajdhani';
+    text-transform: capitalize;
+}
+
+.slider h1 span{
+    color:#7228e2;
+}
+
+@media (max-width : 768px) {
+    .slider h1{
+        font-size: 32px !important;
+    }
+    .slider{
+        padding: 100px 0 !important;
+    }
+}
+@media (max-width : 425px) {
+    .slider h1{
+        font-size: 22px !important;
+    }
+    .slider{
+        padding: 80px 0 !important;
+    }
+}
+
+/******************************** features ********************************/
+
+.features h1{
+    color:white;
+    font-family: 'rajdhani';
+}
+
+.features-box{
+    position: relative;
+    color: white;
+    padding: 30px 20px;
+    height: 100%;
+    background-color:rgba(255, 255, 255, 0.1);
+}
+
+.features-box:hover{
+    border-left: 3px solid #7228e2;
+    border-right: 3px solid #7228e2;
+}
+
+.features-box i{ 
+    font-size:60px;
+}
+
+.features-box h1{ 
+    margin-top: 25px;
+}
+
+.features-box p{ 
+    font-size: 18px;
+}
+
+@media (max-width : 768px) {
+    .features h1{ 
+        font-size: 29px !important;
+    }
+}
+
+/******************************** blog ********************************/
+.blog{
+    padding: 100px 0;
+}
+
+.owl-main{
+    position: relative;
+    width:"100%";
+    height:"100%";
+}
+
+.owl-text{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.owl-text h2{
+    color:white;
+}
+
+.owl-text span{
+    color: #7228e2;
+    font-family: 'Rajdhani';
+    font-weight: 600;
+}
+
+.owl-nav,.owl-dots{
+    display: none;
+}
+
+/******************************** vedio ********************************/
+.vedio{
+    padding-top: 100px;
+}
+
+/******************************** contact ********************************/
+
+.contact p{
+    color: white;
+    font-family: 'Rajdhani';
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.contact p span{
+    color: #7228e2;
+}
+
+.meet-our-team{
+    cursor: pointer;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Rajdhani';
+    font-weight: 500;
+    font-size:20px;
+    background-color: transparent;
+    padding: 20px 40px;
+    position: relative;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.overlay-btn{
+    position: absolute;
+    width: 0;
+    height: 3px;
+    top: 0;
+    left: 50%;
+    background-color: #7228e2;
+    transition: 0.5s;
+}
+
+.meet-our-team:hover .overlay-btn{
+    width: 50%;
+}
+
+.overlay-btn-top-left{
+    position: absolute;
+    width: 0;
+    height: 3px;
+    top: 0;
+    right: 50%;
+    background-color: #7228e2;
+    transition: 0.5s;
+}
+
+.meet-our-team:hover .overlay-btn-top-left{
+    width: 50%;
+}
+
+.overlay-btn-right{
+    position: absolute;
+    width: 3px;
+    height: 0;
+    top: 50%;
+    right: 0;
+    background-color: #7228e2;
+    transition: 0.5s;
+}
+
+.meet-our-team:hover .overlay-btn-right{
+    height: 50%;
+}
+
+.overlay-btn-top-right{
+    position: absolute;
+    width: 3px;
+    height: 0;
+    right: 0;
+    bottom: 50%;
+    background-color: #7228e2;
+    transition: 0.5s;
+}
+
+.meet-our-team:hover .overlay-btn-top-right{
+    height: 50%;
+}
+.overlay-btn-button{
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background-color: #7228e2;
+    transition: 0.5s;
+}
+
+.meet-our-team:hover .overlay-btn-button{
+    width: 50%;
+}
+
+.overlay-btn-top-button{
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    right: 50%;
+    background-color: #7228e2;
+    transition: 0.5s;
+}
+
+.meet-our-team:hover .overlay-btn-top-button{
+    width: 50%;
+}
+
+.overlay-btn-left{
+    position: absolute;
+    width: 3px;
+    height: 0;
+    top: 50%;
+    left: 0;
+    background-color: #7228e2;
+    transition: 0.5s;
+}
+
+.meet-our-team:hover .overlay-btn-left{
+    height: 50%;
+}
+
+.overlay-btn-top-lef{
+    position: absolute;
+    width: 3px;
+    height: 0;
+    left: 0;
+    bottom: 50%;
+    background-color: #7228e2;
+    transition: 0.5s;
+}
+
+.meet-our-team:hover .overlay-btn-top-lef{
+    height: 50%;
+}
+
+.contact textarea{
+    width: 100%;
+    background-color: #22152c;
+    padding: 20px;
+    border: none;
+    height: 150px;
+    border-bottom: 3px solid #7228e2;
+    color: #fff;
+    outline: none;
+}
+
+.contact input{
+    background-color: #22152c;
+    padding: 20px;
+    border: none;
+    outline: none;
+    width:100%;
+    border-bottom: 3px solid #7228e2;
+    color: #fff;
+}
+
+@media (max-width: 425px) {
+    .p p{
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 320px) {
+    .p p{
+        font-size: 22px;
+    }
+}
+
+/******************************** team ********************************/
+.team{
+    padding: 100px 0;
+}
+
+.team-b{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.team-b img{
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+
+.team-b:hover img{
+    transform: scale(1);
+}
+
+.team-text{
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+}
+
+.team-text h2{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.team-text span{
+    color: #7228e2;
+    text-transform: uppercase;
+    font-family: 'rajdhani';
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .team-header img{
+        width: 300px;
+    }
+}
+
+@media (max-width: 280px) {
+    .team-header img{
+        width: 250px;
+    }
+}
+
+/******************************** footer ********************************/
+.footer .bg{
+    background-color: #150f1a;
+    padding: 20px 0;
+}
+
+.footer-lats-text{
+    background-color: #100d12;
+    padding: 50px 0;
+}
+
+.footer a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.377);
+    font-family: 'rajdhani';
+ }
+
+.color{ 
+     color: #7228e2 !important;
+     display: block;
+ }
+
+ @media (max-width: 425px) {
+     .flx{
+         flex-direction: column;
+         text-align: center;
+     }
+     .footer-menu{ 
+         margin: 0 !important;
+     }
+     .footer-logo{ 
+         margin: 0 !important;
+     }
+    
+ }
+
+ @media (max-width: 768px) {
+    .color{
+        float: none !important;
+    }
+ }
+
+ @media (max-width: 280px) { 
+     .footer-logo img{ 
+         width: 250px;
+     }
+     
+ }
